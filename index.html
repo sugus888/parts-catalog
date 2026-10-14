@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>แคตตาล็อกอะไหล่ (ตัวอย่าง)</title>
+<meta name="description" content="แคตตาล็อกอะไหล่ (ตัวอย่าง)">
+<meta property="og:title" content="แคตตาล็อกอะไหล่ (ตัวอย่าง)">
+<meta property="og:description" content="แคตตาล็อกอะไหล่ (ตัวอย่าง)">
+<meta name="theme-color" content="#0d7a6f">
+
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--fg:#17202b;--muted:#5f6b7a;--faint:#8a95a3;--line:#e3e8ee;--primary:#0d7a6f;--primary-ink:#0a5f56;--chip:#eef2f5}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161d26;--fg:#e8edf2;--muted:#a3adb9;--faint:#7c8794;--line:#26303c;--primary:#2bb3a3;--primary-ink:#5fd4c5;--chip:#1e2732}}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--fg);font-family:"Noto Sans Thai","Segoe UI",Tahoma,sans-serif;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;gap:12px;padding:14px 0 10px}
+.top img{width:40px;height:40px;border-radius:10px;object-fit:cover}
+.top h1{font-size:18px;margin:0;line-height:1.2}.top p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.contact{margin-left:auto;font-size:12px;color:var(--muted);text-align:right;white-space:pre-line}
+.search{position:relative;padding-bottom:10px}
+.search input{width:100%;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg);padding:0 14px 0 40px;font-size:16px;outline:none}
+.search input:focus{border-color:var(--primary)}
+.search svg{position:absolute;left:13px;top:13px;width:18px;height:18px;color:var(--faint)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
+.chip[data-active=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+main{padding:14px 0 40px}.count{font-size:12px;color:var(--muted);margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:960px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (min-width:1180px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;text-align:left;padding:0;color:inherit;font:inherit;display:flex;flex-direction:column;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--primary);transform:translateY(-1px)}
+.thumb{aspect-ratio:1/1;background:var(--chip);display:flex;align-items:center;justify-content:center;color:var(--faint)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:10px;display:flex;flex-direction:column;gap:3px;flex:1}
+.name{font-size:14px;font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.en{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.code{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--faint)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto;padding-top:4px}
+.price{font-size:15px;font-weight:700;color:var(--primary-ink)}.ask{font-size:12px;color:var(--muted)}
+.badge{font-size:11px;border-radius:999px;padding:2px 8px;background:#e7f6ec;color:#1a7f3c}.badge.out{background:#fdecec;color:#b42318}
+.more{display:block;width:100%;margin-top:16px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:14px;cursor:pointer}
+.empty{text-align:center;color:var(--muted);padding:60px 0}
+footer{text-align:center;font-size:11px;color:var(--faint);padding:0 16px 32px;line-height:1.6}
+dialog{border:0;padding:0;border-radius:18px;max-width:560px;width:calc(100% - 24px);background:var(--card);color:var(--fg)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.dimg{width:100%;max-height:62vh;object-fit:contain;background:var(--chip);display:block}
+.dbody{padding:16px 18px 20px}.dbody h2{margin:0;font-size:19px}.dbody .en{white-space:normal;font-size:14px;margin-top:3px}
+.close{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:20px;cursor:pointer}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><img id="logo" alt="" hidden><div><h1 id="title">แคตตาล็อกอะไหล่ (ตัวอย่าง)</h1><p id="tagline"></p></div><div class="contact" id="contact"></div></div>
+<div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="ค้นหาชื่ออะไหล่ / รหัส / ชื่ออังกฤษ" autocomplete="off"></div>
+<div class="chips" id="chips"></div>
+</div></header>
+<main class="wrap"><div class="count" id="count">กำลังโหลด…</div><div class="grid" id="grid"></div><button class="more" id="more" hidden></button><div class="empty" id="empty" hidden>ไม่พบอะไหล่ที่ค้นหา</div></main>
+<footer id="footer"></footer>
+<dialog id="dlg"><div style="position:relative"><img class="dimg" id="dimg" alt=""><button class="close" id="dclose" aria-label="ปิด">×</button></div><div class="dbody" id="dbody"></div></dialog>
+<script>
+(function(){
+  var PAGE=60, data=null, cat="", q="", limit=PAGE;
+  var el=function(id){return document.getElementById(id)};
+  function norm(s){return String(s||"").toLowerCase().replace(/\s+/g,"")}
+  function money(n){return "฿"+Number(n).toLocaleString("th-TH",{maximumFractionDigits:2})}
+  function make(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+  function filtered(){var k=norm(q);return data.items.filter(function(it){if(cat&&it.category!==cat)return false;if(!k)return true;return norm(it.name+" "+(it.nameEn||"")+" "+it.partNo+" "+(it.category||"")).indexOf(k)>=0})}
+  function priceNode(it){if(data.showPrice&&it.price!=null)return make("span","price",money(it.price));return make("span","ask",data.showPrice?"สอบถามราคา":"")}
+  function stockNode(it){if(!data.showStock)return null;var b=make("span","badge"+(it.inStock?"":" out"),it.inStock?"มีของ":"หมด");return b}
+  function render(){
+    var list=filtered(),grid=el("grid");grid.textContent="";
+    el("count").textContent="พบ "+list.length.toLocaleString("th-TH")+" รายการ";
+    list.slice(0,limit).forEach(function(it){
+      var c=make("button","card");c.type="button";
+      var t=make("div","thumb");
+      if(it.img){var im=document.createElement("img");im.loading="lazy";im.alt=it.name;im.src=it.img;t.appendChild(im)}else{t.textContent="ไม่มีรูป"}
+      c.appendChild(t);var b=make("div","body");b.appendChild(make("div","name",it.name));
+      if(it.nameEn)b.appendChild(make("div","en",it.nameEn));b.appendChild(make("div","code",it.partNo));
+      var r=make("div","row");r.appendChild(priceNode(it));var s=stockNode(it);if(s)r.appendChild(s);b.appendChild(r);c.appendChild(b);
+      c.onclick=function(){open(it)};grid.appendChild(c);
+    });
+    var more=el("more");more.hidden=list.length<=limit;more.textContent="แสดงเพิ่ม ("+Math.max(0,list.length-limit).toLocaleString("th-TH")+" รายการ)";
+    el("empty").hidden=list.length>0;
+  }
+  function open(it){
+    var d=el("dlg"),img=el("dimg"),body=el("dbody");
+    if(it.imgLarge||it.img){img.src=it.imgLarge||it.img;img.hidden=false}else{img.hidden=true}
+    body.textContent="";body.appendChild(make("h2",null,it.name));if(it.nameEn)body.appendChild(make("div","en",it.nameEn));
+    body.appendChild(make("div","code",it.partNo+(it.category?" · "+it.category:"")));
+    var r=make("div","row");r.style.marginTop="10px";r.appendChild(priceNode(it));var s=stockNode(it);if(s)r.appendChild(s);body.appendChild(r);
+    if(it.unit){var u=make("div","ask","หน่วย: "+it.unit);u.style.marginTop="6px";body.appendChild(u)}
+    if(d.showModal)d.showModal();else d.setAttribute("open","");
+  }
+  el("dclose").onclick=function(){el("dlg").close()};
+  el("dlg").addEventListener("click",function(e){if(e.target===el("dlg"))el("dlg").close()});
+  el("q").addEventListener("input",function(e){q=e.target.value;limit=PAGE;render()});
+  el("more").onclick=function(){limit+=PAGE;render()};
+  fetch("data.json?v="+Date.now()).then(function(r){return r.json()}).then(function(json){
+    data=json;document.title=json.title;el("title").textContent=json.title;el("tagline").textContent=json.company||"";
+    if(json.contact)el("contact").textContent=json.contact;
+    if(json.icon){el("logo").src=json.icon;el("logo").hidden=false}
+    var chips=el("chips"),cats=[];json.items.forEach(function(it){if(it.category&&cats.indexOf(it.category)<0)cats.push(it.category)});cats.sort();
+    [""].concat(cats).forEach(function(name){var b=make("button","chip",name||"ทั้งหมด");b.type="button";b.dataset.active=String(name===cat);b.onclick=function(){cat=name;limit=PAGE;Array.prototype.forEach.call(chips.children,function(x){x.dataset.active="false"});b.dataset.active="true";render()};chips.appendChild(b)});
+    el("footer").textContent="ข้อมูล ณ "+new Date(json.generatedAt).toLocaleString("th-TH")+" · ราคาอาจเปลี่ยนแปลง กรุณาติดต่อร้านเพื่อยืนยันก่อนสั่งซื้อ";
+    render();
+  }).catch(function(){el("count").textContent="โหลดข้อมูลไม่สำเร็จ กรุณาลองใหม่"});
+})();
+</script>
+</body>
+</html>
